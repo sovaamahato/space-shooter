@@ -11,11 +11,11 @@ let bulletHaru=[];
 let enemies = [];
 
 setInterval(() => {
-  const enemy = new Enemy();
+   const enemy = new Enemy();
   enemies.push(enemy);
-}, 2000);
-const enemy=new Enemy();
+}, 1000);
 
+//const enemy=new Enemy();
 
 
 
@@ -23,14 +23,14 @@ const enemy=new Enemy();
 
 function loop(){
     c.clearRect(0,0,canvas.width,canvas.height);
-
+    rocket.update();
      //game score 
      c.beginPath();
      c.fillStyle='white';
      c.font='30px';
      c.fillText("Score"+gameScore, 10,40);
     
-rocket.update();
+
 //enemies haru
 for (let i = 0; i < enemies.length; i++) {
     enemies[i].update();
@@ -43,10 +43,6 @@ for(let i=0;i<bulletHaru.length;i++){
 
 
 }
-enemy.update();
-
-
-
     window.requestAnimationFrame(loop);
 }
 

@@ -2,7 +2,7 @@ class Enemy{
     constructor(){
         this.position = {
             x: Math.random() * (canvas.width - 50 - 10) + 10,
-            y: -50,
+            y: -12,
           };
       
           this.velocity = {
