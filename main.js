@@ -10,7 +10,7 @@ let bulletHaru=[];
 //for enemies
 let enemies = [];
 
-setInterval(() => {
+const intervalId=setInterval(() => {
    const enemy = new Enemy();
   enemies.push(enemy);
 }, 1000);
@@ -41,6 +41,12 @@ for (let i = 0; i < enemies.length; i++) {
 for(let i=0;i<bulletHaru.length;i++){
     bulletHaru[i].update();
 
+
+}
+
+
+if(!rocket.isAlive){
+    clearInterval(intervalId);
 
 }
     window.requestAnimationFrame(loop);
